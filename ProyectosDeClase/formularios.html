@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Formulario</title>
+
+        <script>
+                function testForm() {
+                    alert(document.getElementById('name').value);
+                    alert(document.querySelector('input[name="sex"]:checked').value);
+                    alert(document.querySelector('input[name="vehiculo"]:checked').value);
+                    return false;
+                }
+        </script>
+    </head>
+    <body>
+        <h1>Formularios</h1>
+        <form onsubmit="return testForm()">
+            <div>
+                <h3>Texto</h3>
+                <label for="name">Name:</label>
+                <input id="name" name="name" type="text">
+            </div>
+            
+            <div>
+                <h3>Radio Button</h3>
+                <input type="radio" name="sex" id="male" value="hom">
+                <label for="man"> Male</label><br><br>
+                <input type="radio" name="sex" id="female" value="muj">
+                <label for="female"> Female</label><br><br>
+                <input type="radio" name="sex" id="other" value="otr">
+                <label for="other"> Other</label>
+            </div>
+            
+            <div>
+                <h3>Selector de opciones</h3>
+                <select>
+                    <option>Volvo</option>
+                    <option>Nissan</option>
+                </select>
+            </div>
+
+            <div>
+                <h3>Área de Texto</h3>
+                <textarea rows=”100” cols=”40” name=”texto”>Texto inicial dentro del campo</textarea>
+            </div>
+
+            <div>
+                <h3>Contraseña</h3>
+                <label for="contraseña">Keyword: </label>
+                <input type="password" id=”nombre” name=”nombre”>
+            </div>
+            
+            <div>
+                <h3>Checkbox</h3>
+                ¿Cual es tu vehiculo? <br><br>
+                <input type="checkbox" name="vehiculo" id="bici" value="bicicleta">
+                <label for="bici"> Tengo una bici</label><br><br>
+                <input type="checkbox" name="vehiculo" id="coche" value="coche">
+                <label for="coche"> Tengo un coche</label><br><br>
+                <input type="checkbox" name="vehiculo" id="moto" value="moto">
+                <label for="moto"> Tengo una moto</label>
+
+            </div>
+
+            <div>
+                <h3>Subida de archivo</h3>
+                <label for="archivo">Selecciona el/los archivo/s a subir: </label>
+                <input type="file"> <br><br>
+                <input type="submit" value="Enviar el formulario"> 
+            </div>
+        </form>
+    </body>
+</html>
