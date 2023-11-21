@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Información sobre el producto</title>
+    </head>
+
+    <body>
+        <h1>Información sobre el producto</h1>
+        <fieldset>
+            <legend>Datos básicos</legend>
+            <div>
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre">
+                <br><br>
+            </div>
+            <div>
+                <label for="descripcion">Descripción</label><br>
+                <textarea name="descripcion" id="descripcion"></textarea>
+                <br><br>
+            </div>
+            <div>
+                <label for="foto">Foto</label>
+                <input type="file" name="foto" id="foto">
+                <br><br>
+            </div>
+            <div>
+                <input name="contador" type="checkbox">
+                <label for="contador">Añadir contador de visitas</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Datos económicos</legend><br>
+            <label for="precio">Precio</label>
+            <input size="1" type="text" name="precio" id="precio"> 
+            <label for="precio">&euro;</label>
+            <label for="impuestos">Impuestos</label>
+            <select id="impuestos" name="impuestos">
+                <option value="4">4%</option>
+                <option value="5">5%</option>
+                <option value="6">6%</option>
+            </select><br><br>
+            
+            <label for="promocion">Promoción</label><br>
+            <input type="radio" name="promocion" id="ninguno" value="ninguno" checked="checked">
+            <label for="ninguno">Ninguno</label><br>
+            <input type="radio" name="promocion" id="transporte" value="transporte">
+            <label for="transporte">Transporte gratuito</label><br>
+            <input type="radio" name="promocion" id="descuento" value="descuento">
+            <label for="descuento">Descuento 5%</label><br>
+        </fieldset>
+    </body>
+</html>
